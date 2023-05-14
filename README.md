@@ -5,8 +5,6 @@ A script to control access with doors of force fields.
 - It can control several doors and force fields at the same time.
 - You can manage access with user name, user id, organisation name or organisation id.
 
-
-| --- | --- |
 | ![Access Granted](https://raw.githubusercontent.com/Jericho1060/du-simple-access-control/main/images/screen_access_granted.png) | ![Access Denied](https://raw.githubusercontent.com/Jericho1060/du-simple-access-control/main/images/screen_access_denied.png) |
 | --- | --- |
 
