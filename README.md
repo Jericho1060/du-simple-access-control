@@ -5,6 +5,11 @@ A script to control access with doors of force fields.
 - It can control several doors and force fields at the same time.
 - You can manage access with user name, user id, organisation name or organisation id.
 
+
+| --- | --- |
+| ![Access Granted](https://raw.githubusercontent.com/Jericho1060/du-simple-access-control/main/images/screen_access_granted.png) | ![Access Denied](https://raw.githubusercontent.com/Jericho1060/du-simple-access-control/main/images/screen_access_denied.png) |
+| --- | --- |
+
 ## How to install
 
 1. copy the script on the board
@@ -15,7 +20,7 @@ A script to control access with doors of force fields.
 
 ## Mounting Scheme
 
-![Mounting Scheme]()
+![Mounting Scheme](https://raw.githubusercontent.com/Jericho1060/du-simple-access-control/main/images/mounting_scheme.png)
 
 ## How to configure
 
@@ -25,4 +30,4 @@ In the Lua Parameters of the board (right click on the board > advanced > Lua pa
 - AllowedUserOrgsId: the list of the organisations id allowed to access, comma separated.
 - AllowedUserOrgsName: the list of the organisations name allowed to access, comma separated, case sensitive.
 
-![Lua Parameters]()
+![Lua Parameters](https://raw.githubusercontent.com/Jericho1060/du-simple-access-control/main/images/lua_parameters.png)
