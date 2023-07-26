@@ -8,6 +8,14 @@ A script to control access with doors of force fields.
 | ![Access Granted](https://raw.githubusercontent.com/Jericho1060/du-simple-access-control/main/images/screen_access_granted.png) | ![Access Denied](https://raw.githubusercontent.com/Jericho1060/du-simple-access-control/main/images/screen_access_denied.png) |
 | --- | --- |
 
+# Guilded Server (better than Discord)
+
+You can join me on Guilded for help or suggestions or requests by following that link : https://guilded.jericho.dev
+
+# Discord Server
+
+You can join me on Discord for help or suggestions or requests by following that link : https://discord.gg/qkdjyqDZQZ
+
 ## How to install
 
 1. copy the script on the board
