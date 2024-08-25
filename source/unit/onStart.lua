@@ -1,9 +1,9 @@
---version 1.0.0
+--version 1.0.1
 
 --LUA PARAMETERS
 local AllowedUsersId = "" --export: the list of all IDs, comma separated
-local AllowedUsersName = "Jericho" --export: the list of all names, comma separated (Case sensitive)
-local AllowedUserOrgsId = "18261" --export: the list of all organisation IDs, comma separated
+local AllowedUsersName = "jericho" --export: the list of all names, comma separated (Case sensitive)
+local AllowedUserOrgsId = "" --export: the list of all organisation IDs, comma separated
 local AllowedUserOrgsName = "Federatis" --export: the list of all organisation Names, comma separated (Case sensitive)
 
 --Libraries
@@ -17,6 +17,7 @@ unit.hideWidget()
 Doors = {}
 Fields = {}
 Screens = {}
+Switches = {}
 for slotName,slot in pairs(unit) do
     if
         type(slot) == "table"
@@ -26,6 +27,9 @@ for slotName,slot in pairs(unit) do
         local ElementClass = slot.getClass():lower()
         if ElementClass:find("doorunit") then
             table.insert(Doors, slot)
+        elseif ElementClass:find("manualswitchunit") then
+            table.insert(Switches, slot)
+            slot.deactivate()
         elseif ElementClass:find("forcefieldunit") then
             table.insert(Fields, slot)
             slot.activate()
@@ -111,6 +115,9 @@ function grantAccess()
     for _,Field in pairs(Fields) do
         Field.deactivate() --open the field
     end
+    for _,Switch in pairs(Switches) do
+        Switch.activate() --activate the swicth
+    end
     setRenderScriptOnScreens(true)
 end
 
@@ -122,7 +129,11 @@ function closeAll()
     for _,Field in pairs(Fields) do
         Field.activate() --close the field
     end
+    for _,Switch in pairs(Switches) do
+        Switch.deactivate() --deactivate the switch
+    end
 end
+closeAll() --close all by default
 
 function rejectAccess()
     closeAll()
